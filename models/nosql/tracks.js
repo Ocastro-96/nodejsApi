@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const TracksScheme = new mongoose.Schema(
+const tracksScheme = new mongoose.Schema(
     {
         name: {
             type: String,
@@ -41,7 +41,7 @@ const TracksScheme = new mongoose.Schema(
             },
         },
         mediaId: {
-            type: mongoose.Types.ObjectId,
+            type: String
         },
 
     },
@@ -51,4 +51,4 @@ const TracksScheme = new mongoose.Schema(
     }
 );
 
-module.exports = mongose.model("tracks", TracksScheme)
+module.exports = mongoose.model("tracks", tracksScheme)

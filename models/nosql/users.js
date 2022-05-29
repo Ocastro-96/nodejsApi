@@ -27,4 +27,4 @@ const UserScheme = new mongoose.Schema({
 );
 
 // exportamos el modelo pasando le el nombre de la tabla en mysql o colleccion en mongoDB llamado 'User' y pasamos tambien el esquema anteriormente creado 
-module.exports = mongose.model("users", UserScheme)
+module.exports = mongoose.model("users", UserScheme);

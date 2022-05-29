@@ -1,10 +1,12 @@
+
+const {tracksModel} = require("../models")
 /**
  * Obtener lista de Base de Datos
  * @param {*} req 
  * @param {*} res 
  */
-const getItems = (req, res) => { 
-    const data = ["hola", "mundo"]
+const getItems = async (req, res) => { 
+    const data = await tracksModel.find({});
     res.send({ data })
 }
 
@@ -20,23 +22,28 @@ const getItem = (req, res) => { }
  * @param {*} req 
  * @param {*} res 
  */
-const createItem = (req, res) => { }
+const createItem = async (req, res) => {
+    const{body}= req
+    console.log(body)
+    const data = await tracksModel.create(body)
+    res.send({data})
+ }
 
 /**
  * Actulazar o Modificar un Reguistro
  * @param {*} req 
  * @param {*} res 
  */
-const updateItems = (req, res) => { }
+const updateItem = (req, res) => { }
 
 /**
  * Eliminar un Reguistro
  * @param {*} req 
  * @param {*} res 
  */
-const deleteItems = (req, res) => { }
+const deleteItem = (req, res) => { }
 
 
 
 
-module.exports = { getItems, getItem, createItem, updateItems, deleteItems }
+module.exports = { getItems, getItem, createItem, updateItem, deleteItem }
