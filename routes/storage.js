@@ -6,6 +6,6 @@ const router = express.Router();
 
 
 router.post("/", uploadMiddleware.single("myfile"), (req, res)=>{
-    res.send({a:1})
+    res.send({a:5})
 })
 module.exports = router
