@@ -10,8 +10,7 @@ const removeExtension = (fileName) => {
 }
 
 
-fs.readdirSync(PATH_ROUTES)
-    .filter((file) => {
+fs.readdirSync(PATH_ROUTES).filter((file) => {
         const name = removeExtension(file) //TODO INDEX, TRACKS
         if (name !== 'index') {
             console.log(`cargando la ruta ${name}`)
