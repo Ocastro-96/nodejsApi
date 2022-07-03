@@ -7,7 +7,7 @@ const StorageScheme = new mongoose.Schema(
         },
         url: {
             type: String,
-        }
+        }      
     },
     {
         timestamps: true, //TODO createdAt, updatedAt se usa este tipo de esquema
@@ -15,4 +15,4 @@ const StorageScheme = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model("storage", StorageScheme)
+module.exports = mongoose.model("storages", StorageScheme)
