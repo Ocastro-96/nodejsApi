@@ -1,6 +1,6 @@
 const express = require("express");
 const { route } = require("express/lib/application");
-const {validatorCreateItem} = require("../validators/tracks")
+const {validatorCreateItem} = require("../validators/track")
 const customHeader = require("../middleware/customHeader")
 const { getItems, createItem } = require("../controllers/track");
 const router = express.Router();
