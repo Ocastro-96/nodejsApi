@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const mongooseDelete = require("mongoose-delete")
 //creamos el esquema usando la libreria de Mongoose
 const UserScheme = new mongoose.Schema({
     name: {
@@ -26,5 +27,6 @@ const UserScheme = new mongoose.Schema({
     }
 );
 
+UserScheme.plugin(mongooseDelete, {overrideMethods:"all"});
 // exportamos el modelo pasando le el nombre de la tabla en mysql o colleccion en mongoDB llamado 'User' y pasamos tambien el esquema anteriormente creado 
 module.exports = mongoose.model("users", UserScheme);
